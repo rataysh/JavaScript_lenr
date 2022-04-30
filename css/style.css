@@ -1,10 +1,10 @@
 :root {
     --color1: #39eded;
-    --color2: #245e5e;
+    --color2: #295757;
 }
 
 h1 {
-    color: #032830;
+    color: white;
 }
 
 footer, section {
@@ -13,11 +13,24 @@ footer, section {
 
 header {
     padding: 200px 0;
-    background: var(--color2);
+    /* background: var(--color2);
     background: -moz-linear-gradient(left,  var(--color2) 0%, var(--color1) 100%);
     background: -webkit-linear-gradient(left,  var(--color2) 0%,var(--color1) 100%);
     background: linear-gradient(to right,  var(--color2) 0%,var(--color1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color2), endColorstr=var(--color1),GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color2), endColorstr=var(--color1),GradientType=1 ); */
+    /* background: var(--color1);
+    background: -moz-linear-gradient(top, var(--color1) 0%, var(--color2) 100%);
+    background: -webkit-linear-gradient(top, var(--color1)d 0%,var(--color2) 100%);
+    background: linear-gradient(to bottom, var(--color1) 0%,var(--color2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color1), endColorstr=var(--color2),GradientType=0 ); */
+}
+
+section {
+    background: var(--color2);
+    background: -moz-linear-gradient(top, var(--color2) 0%, var(--color1) 100%);
+    background: -webkit-linear-gradient(top, var(--color2) 0%,var(--color1) 100%);
+    background: linear-gradient(to bottom, var(--color2) 0%,var(--color1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color2), endColorstr=var(--color1),GradientType=0 );
 }
 
 .btn-my-style {
@@ -32,4 +45,43 @@ header {
 .btn-my-style:hover {
     color: #032830;
     background-color: var(--color1);    
+}
+
+.element_square {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 50px 50px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-color: #9cdae9;
+}
+
+/* Классы цветов */
+.color1 {
+    color: var(--color1);
+}
+
+.color2 {
+    color: var(--color2);
+}
+
+.back-color1 {
+    background-color: var(--color1);
+}
+
+.back-color2 {
+    background-color: var(--color2);
+}
+
+.row-my-style {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
 }
