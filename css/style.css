@@ -1,3 +1,35 @@
+:root {
+    --color1: #39eded;
+    --color2: #245e5e;
+}
+
 h1 {
-    color:blue;
+    color: #032830;
+}
+
+footer, section {
+    padding: 100px 0;
+}
+
+header {
+    padding: 200px 0;
+    background: var(--color2);
+    background: -moz-linear-gradient(left,  var(--color2) 0%, var(--color1) 100%);
+    background: -webkit-linear-gradient(left,  var(--color2) 0%,var(--color1) 100%);
+    background: linear-gradient(to right,  var(--color2) 0%,var(--color1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color2), endColorstr=var(--color1),GradientType=1 );
+}
+
+.btn-my-style {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+    /* padding: 8px 30px; */
+    color: white;
+    background-color: var(--color2);
+}
+
+.btn-my-style:hover {
+    color: #032830;
+    background-color: var(--color1);    
 }
