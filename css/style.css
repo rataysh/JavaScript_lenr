@@ -13,7 +13,7 @@ footer, section {
 
 header {
     padding: 200px 0;
-    /* background: var(--color2);
+    background: var(--color2);
     background: -moz-linear-gradient(left,  var(--color2) 0%, var(--color1) 100%);
     background: -webkit-linear-gradient(left,  var(--color2) 0%,var(--color1) 100%);
     background: linear-gradient(to right,  var(--color2) 0%,var(--color1) 100%);
@@ -25,13 +25,14 @@ header {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color1), endColorstr=var(--color2),GradientType=0 ); */
 }
 
-section {
+/* section {
     background: var(--color2);
     background: -moz-linear-gradient(top, var(--color2) 0%, var(--color1) 100%);
     background: -webkit-linear-gradient(top, var(--color2) 0%,var(--color1) 100%);
     background: linear-gradient(to bottom, var(--color2) 0%,var(--color1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color2), endColorstr=var(--color1),GradientType=0 );
-}
+} */
+
 
 .btn-my-style {
     display: block;
@@ -47,6 +48,7 @@ section {
     background-color: var(--color1);    
 }
 
+/* стиль для квадратов */
 .element_square {
     width: 0;
     height: 0;
@@ -76,12 +78,4 @@ section {
     background-color: var(--color2);
 }
 
-.row-my-style {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-.5 * var(--bs-gutter-x));
-    margin-left: calc(-.5 * var(--bs-gutter-x));
-}
+

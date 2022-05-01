@@ -1,12 +1,12 @@
-// alert('Hello!')
-// result = prompt('title', ['default'])
+const buttonStart = document.getElementById('start-button')
+const listSubject = ['Lida', 'Denis', 'Bebyrishvili']
 
-// // Создание переменных:
-// const firstTestVar = "You can NOT change this"
-// let secondTestVar = "You can change this"
+function generateNewEx() {
+    alert('Нажатие на кнопку работает!')
+}
 
-// // firstTestVar = "I'm trying change" // eror in console
-// secondTestVar = "I'm trying change"
-
-// console.log(firstTestVar, secondTestVar)
-
+buttonStart.onclick = generateNewEx
+// Ниже аналогичная запись, только через стрелочную функцию
+// buttonStart.onclick = () => {
+//     alert('Нажатие на кнопку работает!')
+// }
