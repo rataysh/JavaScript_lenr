@@ -125,4 +125,7 @@ transform: scale(1.1) */
     background-color: var(--color2);
 }
 
-
+/* Изменение шрифта */
+span {
+    font-size: 17pt;
+}
