@@ -8,21 +8,26 @@ let listA = [1,2,3]
 let listB = [1,2]
 
 
+// function arrayDiff(a, b) {
+//     if (a == 0) {
+//         let newRes = []
+//         return newRes
+//     } else if (b == 0) {
+//         return a
+//     } else {
+//         for (let i = 0; i < a.length ; i++) {
+//             if (b.includes(a[i])) {
+//                 a.splice(i, 1)
+//                 i--
+//             } 
+//         }
+//         return a
+//     }
+// }
+
+
 function arrayDiff(a, b) {
-    if (a == 0) {
-        let newRes = []
-        return newRes
-    } else if (b == 0) {
-        return a
-    } else {
-        for (let i = 0; i < a.length ; i++) {
-            if (b.includes(a[i])) {
-                a.splice(i, 1)
-                i--
-            } 
-        }
-        return a
-    }
-}
+    return a.filter(e => !b.includes(e));
+  }
 
 console.log(arrayDiff(listA, listB))
