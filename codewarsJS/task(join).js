@@ -4,11 +4,13 @@
 // Sam Harris => S.H
 // patrick feeney => P.F
 
+let testData = "patrick feeney";
 
-let testData = 'patrick feeney'
-
-function abbrevName(name){
-    return name.split(' ').map((i) => i[0].toUpperCase()).join('.')
+function abbrevName(name) {
+    return name
+        .split(" ")
+        .map((i) => i[0].toUpperCase())
+        .join(".");
 }
 
-abbrevName(testData)
+abbrevName(testData);

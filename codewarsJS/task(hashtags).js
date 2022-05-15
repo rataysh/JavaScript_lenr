@@ -10,20 +10,22 @@
 // "    Hello     World   "                  =>  "#HelloWorld"
 // ""                                        =>  false
 
-let testData = "Codewars"
-
+let testData = "Codewars";
 
 function generateHashtag(str) {
     if (str === "") {
-        return false
+        return false;
     } else if (str === " ") {
-        return false
+        return false;
     } else {
-        let new_array = str.trim().split(' ').map((a) => a.charAt(0).toUpperCase() + a.slice(1))
-        let result = (new_array.join('').length < 140) ? '#' + new_array.join('') : false
-        return result
+        let new_array = str
+            .trim()
+            .split(" ")
+            .map((a) => a.charAt(0).toUpperCase() + a.slice(1));
+        let result =
+            new_array.join("").length < 140 ? "#" + new_array.join("") : false;
+        return result;
     }
 }
 
-
-console.log(generateHashtag(testData))
+console.log(generateHashtag(testData));

@@ -5,16 +5,14 @@
 // The returned format must be correct in order to complete this challenge.
 // Don't forget the space after the closing parentheses!
 
-let testData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+let testData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-
-function createPhoneNumber(numbers){
-    numbers.splice(0, 0, "(")
-    numbers.splice(4, 0, ")")
-    numbers.splice(5, 0, " ")
-    numbers.splice(9, 0, "-")
-    return numbers.join('')
+function createPhoneNumber(numbers) {
+    numbers.splice(0, 0, "(");
+    numbers.splice(4, 0, ")");
+    numbers.splice(5, 0, " ");
+    numbers.splice(9, 0, "-");
+    return numbers.join("");
 }
 
-
-createPhoneNumber(testData)
+createPhoneNumber(testData);
