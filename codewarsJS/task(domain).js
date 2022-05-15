@@ -13,7 +13,7 @@ function domainName(url){
     return url.replace(/(\w+\:\/\/)?(www\.)?/ig, '').replace(/(\..+)/ig, '')
 }
 
-
+// url.replace(/.*\/\/|www.|\..*/ig, ``)
 
 
 
