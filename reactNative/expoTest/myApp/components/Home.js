@@ -6,8 +6,13 @@ export default function Home() {
     return (
         <View style={[styles.container]}>
             <View style={[styles.square]}>
-                <Text style={styles.text}>HELLO MY HOME!!!</Text>
+                {/* <Text style={styles.text}>HELLO MY HOME!!!</Text> */}
                 <Icon name="home" size={30} color="#4F8EF7" />
+            </View>
+            <View style={styles.header}> 
+                <Text style={[styles.textHeader, {textAlign: "center"}]}>
+                    Start your controlled{"\n"} improvisation exercises now
+                </Text>
             </View>
             <View
                 style={[
@@ -19,7 +24,7 @@ export default function Home() {
                     },
                 ]}
             >
-                <Text style={styles.text}>RULES</Text>
+                <Text style={styles.textBtn}>RULES</Text>
             </View>
             <View
                 style={[
@@ -31,7 +36,7 @@ export default function Home() {
                     },
                 ]}
             >
-                <Text style={styles.text}>START</Text>
+                <Text style={styles.textBtn}>START</Text>
             </View>
         </View>
     );
@@ -41,28 +46,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "rgba(29, 33, 46, 0.69)",
-        padding: '20%',
-        // position: "relative",
-        // width: Dimensions.get("window").width,
-        // height: 800,
-        // borderRadius: 0,
-        // overflow: "hidden",
-        // transform: [{ translateX: 0 }, { translateY: 0 }, { rotate: "0deg" }],
-        // padding: 'spacing',
-        // flexDirection: "column",
-        // flexWrap:'wrap',
-        // aliginContent: 'stretch',
-        // alignItems: "center",
-        // justifyContent: "center",
-        // left: 0,
-        // top: 0,
+        padding: '2%',
     },
     square: {
         position: "relative",
-        // flex: 1,
         width: 180,
         height: 180,
         borderRadius: 30,
+        marginTop: 60,
         alignSelf: "center",
         // flexDirection: "row",
         // marginTop: "15%",
@@ -84,12 +75,21 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+    header: {
+        marginTop: 80,
+        justifyContent: "center",
+        alignSelf: "center",
+        
+        // alignItems: "baseline",
+        // right: 0,
+        // left: 0,
+    },
     btnRules: {
         position: "relative",
         width: 180,
         height: 50,
         alignSelf: "center",
-        marginTop: "70%",
+        marginTop: 100,
         borderRadius: 30,
         opacity: 1,
         borderWidth: 1,
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
         width: 180,
         height: 50,
         alignSelf: "center",
-        marginTop: "10%",
+        marginTop: "4%",
         borderRadius: 30,
         opacity: 1,
         borderWidth: 1,
@@ -122,8 +122,15 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         backgroundColor: "rgba(95, 116, 230, 1)",
     },
-    text: {
-        fontFamily: "OpenSans-ExtraBold",
+    textHeader: {
+        fontFamily: "OpenSans-Bold",
+        fontSize: 25,
+        color: "rgba(252, 252, 252, 0.86)",
+        letterSpacing: 0.1,
+        textAlignVertical: "top",
+    },
+    textBtn: {
+        fontFamily: "OpenSans-Bold",
         textDecorationLine: "none",
         fontSize: 25,
         color: "rgba(252, 252, 252, 0.86)",
