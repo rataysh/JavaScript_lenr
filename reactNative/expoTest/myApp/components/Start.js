@@ -30,12 +30,12 @@ export default function Start() {
     );
 }
 
-const leftFirst = 30;
-const leftSecond = leftFirst + 123; //100 это сторона квадрата
-const leftThird = leftSecond + 123;
-const topFirst = 160;
-const topSecond = topFirst + 123;
-const topThird = topSecond + 123;
+export const leftFirst = 30;
+export const leftSecond = leftFirst + 123; //100 это сторона квадрата
+export const leftThird = leftSecond + 123;
+export const topFirst = 160;
+export const topSecond = topFirst + 123;
+export const topThird = topSecond + 123;
 const btnMarginTop = topThird + topFirst;
 
 const styles = StyleSheet.create({
