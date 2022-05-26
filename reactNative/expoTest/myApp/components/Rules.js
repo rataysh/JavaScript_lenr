@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import {
@@ -8,13 +8,24 @@ import {
     topFirst,
     topSecond,
     topThird,
+    btnMarginTop,
 } from "./Start";
 
 export default function Rules() {
     return (
         <View style={[styles.container]}>
-            <View style={[styles.smalSquare, styles.smalSquare1]}></View>
-            <View style={[styles.smalSquare, styles.smalSquare2]}></View>
+            <View style={[styles.smalSquare, styles.smalSquare1, styles.rulesDescription]}>
+                {/* <Text style={styles.textSquare}>V1{"\n"}WILL</Text> */}
+            </View>
+            <View style={[styles.smalSquare, styles.smalSquare2]}>
+                {/* <Text style={[styles.textDescription, {fontSize: 17}]}>
+                    <Text style={[{fontSize: 23, aling}]}>WILL +{"\n"}</Text>
+                    -be able{"\n"}
+                    -be allowed{"\n"}
+                    -have
+                    <Text style={{fontSize: 23}}>{"\n"} + to</Text>
+                </Text>     */}
+            </View>
             <View style={[styles.smalSquare, styles.smalSquare3]}></View>
             <View style={[styles.smalSquare, styles.smalSquare4]}></View>
             <View style={[styles.smalSquare, styles.smalSquare5]}></View>
@@ -22,10 +33,12 @@ export default function Rules() {
             <View style={[styles.smalSquare, styles.smalSquare7]}></View>
             <View style={[styles.smalSquare, styles.smalSquare8]}></View>
             <View style={[styles.smalSquare, styles.smalSquare9]}></View>
+            <View style={[styles.description, styles.textDescription]}>
+                <Text style={styles.textDescription}>test 10*50 </Text>
+            </View>
         </View>
     );
 }
-
 
 const styles = StyleSheet.create({
     container: {
@@ -39,8 +52,8 @@ const styles = StyleSheet.create({
     },
     smalSquare: {
         position: "absolute",
-        width: 110,
-        height: 110,
+        width: 117,
+        height: 117,
         borderRadius: 20,
         backgroundColor: "hsla(169, 74%, 57%, 0.85)",
         shadowColor: "rgb(0, 0, 0)",
@@ -105,9 +118,37 @@ const styles = StyleSheet.create({
         top: topThird,
         bottom: "auto",
     },
-    header: {
-        marginTop: 80,
+    description: {
+        marginTop: btnMarginTop,
         justifyContent: "center",
         alignSelf: "center",
+    },
+    rulesDescription: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    // textSquare: {
+    //     // fontFamily: "OpenSans-Bold",
+    //     // fontSize: 25,
+    //     color: "rgba(252, 252, 252, 0.86)",
+    //     // letterSpacing: 0.1,
+    //     // textAlignVertical: "top",
+
+    //     // fontFamily: "OpenSans-Bold",
+    //     fontStyle: 'normal',
+    //     fontWeight: '700',
+    //     fontSize: 25,
+    //     lineHeight: 25,
+    //     display: 'flex',
+    //     alignItems: 'center',
+    //     textAlign: 'center',
+    //     textTransform: 'uppercase',  
+    // },
+    textDescription: {
+        fontFamily: "OpenSans-Bold",
+        fontSize: 25,
+        color: "rgba(252, 252, 252, 0.86)",
+        letterSpacing: 0.1,
+        textAlignVertical: "top",
     },
 });

@@ -1,8 +1,12 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-export default function Home() {
+
+export default function Home({navigation}) {
     return (
         <View style={[styles.container]}>
             <View style={[styles.square]}>
@@ -14,7 +18,8 @@ export default function Home() {
                     Start your controlled{"\n"} improvisation exercises now
                 </Text>
             </View>
-            <View
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Rules')}
                 style={[
                     styles.btnRules,
                     {
@@ -25,8 +30,9 @@ export default function Home() {
                 ]}
             >
                 <Text style={styles.textBtn}>RULES</Text>
-            </View>
-            <View
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Start')}
                 style={[
                     styles.btnStart,
                     {
@@ -37,7 +43,7 @@ export default function Home() {
                 ]}
             >
                 <Text style={styles.textBtn}>START</Text>
-            </View>
+            </TouchableOpacity>
         </View>
     );
 }

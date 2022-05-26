@@ -1,10 +1,35 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+// import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-export default function Start() {
+export default function Start({ navigation }) {
     return (
         <View style={[styles.container]}>
+            <TouchableOpacity
+                onPress={() => navigation.navigate("Rules")}
+                style={{
+                    paddingTop: 20,
+                    justifyContent: "flex-end",
+                    flexDirection: "row",
+                    alignItems: "center",
+                }}
+            >
+                <Text>Rules</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => navigation.navigate("Home")}
+                style={{
+                    // paddingTop: 20,
+                    // justifyContent: "flex-end",
+                    flexDirection: "row",
+                    alignItems: "center",
+                }}
+            >
+                <Text>Home</Text>
+            </TouchableOpacity>
             <View style={[styles.smalSquare, styles.smalSquare1]}></View>
             <View style={[styles.smalSquare, styles.smalSquare2]}></View>
             <View style={[styles.smalSquare, styles.smalSquare3]}></View>
@@ -14,17 +39,19 @@ export default function Start() {
             <View style={[styles.smalSquare, styles.smalSquare7]}></View>
             <View style={[styles.smalSquare, styles.smalSquare8]}></View>
             <View style={[styles.smalSquare, styles.smalSquare9]}></View>
-            <View
-                style={[
-                    styles.btnGo,
-                    {
-                        justifyContent: "center",
-                        flexDirection: "row",
-                        alignItems: "center",
-                    },
-                ]}
-            >
-                <Text style={[styles.textBtn]}>GO</Text>
+            <View>
+                <TouchableOpacity
+                    style={[
+                        styles.btnGo,
+                        {
+                            justifyContent: "center",
+                            flexDirection: "row",
+                            alignItems: "center",
+                        },
+                    ]}
+                >
+                    <Text style={[styles.textBtn]}>GO</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
@@ -36,7 +63,7 @@ export const leftThird = leftSecond + 123;
 export const topFirst = 160;
 export const topSecond = topFirst + 123;
 export const topThird = topSecond + 123;
-const btnMarginTop = topThird + topFirst;
+export const btnMarginTop = topThird + topFirst;
 
 const styles = StyleSheet.create({
     container: {
@@ -50,8 +77,8 @@ const styles = StyleSheet.create({
     },
     smalSquare: {
         position: "absolute",
-        width: 110,
-        height: 110,
+        width: 117,
+        height: 117,
         borderRadius: 20,
         backgroundColor: "hsla(169, 74%, 57%, 0.85)",
         shadowColor: "rgb(0, 0, 0)",
@@ -155,4 +182,3 @@ const styles = StyleSheet.create({
         letterSpacing: 0.1,
     },
 });
-

@@ -1,40 +1,40 @@
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./components/Home";
 import Rules from "./components/Rules";
 import Start from "./components/Start";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const Tab = createBottomTabNavigator();
+// const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
-export default function App() {
+
+function App() {
     return (
         <NavigationContainer>
-            <Tab.Navigator>
-                <Tab.Screen
+            <Stack.Navigator>
+                <Stack.Screen
                     name="Home"
                     component={Home}
-                    options={{
-                        headerShown: false,
-                    }}
+                    options={{ headerShown: false }}
                 />
-                <Tab.Screen
+                <Stack.Screen
                     name="Start"
                     component={Start}
-                    options={{
-                        headerShown: false,
-                    }}
+                    options={{ headerShown: false }}
                 />
-                <Tab.Screen
+                <Stack.Screen
                     name="Rules"
                     component={Rules}
-                    options={{
-                        headerShown: false,
-                    }}
+                    options={{ headerShown: false }}
                 />
-            </Tab.Navigator>
+            </Stack.Navigator>
         </NavigationContainer>
     );
 }
+
+export default App;
+
